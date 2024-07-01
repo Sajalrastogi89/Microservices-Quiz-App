@@ -22,8 +22,8 @@ This project is a Quiz Microservice Application designed to manage quizzes and t
 
 ## Architecture
 
-![Architecture](Screenshot_2024-07-01-18-43-11-843_com.google.android.youtube.jpg)
-![Architecture](Screenshot_2024-07-01-18-43-54-581_com.google.android.youtube.jpg)
+![Architecture](/img/Screenshot_2024-07-01-18-43-11-843_com.google.android.youtube.jpg)
+![Architecture](/img/Screenshot_2024-07-01-18-43-54-581_com.google.android.youtube.jpg)
 
 The application is composed of three main services:
 
