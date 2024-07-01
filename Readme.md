@@ -17,8 +17,6 @@ This project is a Quiz Microservice Application designed to manage quizzes and t
 - [Setup](#setup)
 - [Usage](#usage)
 - [Architecture Diagram](#architecture-diagram)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Architecture
 
