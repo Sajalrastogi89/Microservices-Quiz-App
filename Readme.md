@@ -22,7 +22,8 @@ This project is a Quiz Microservice Application designed to manage quizzes and t
 
 ## Architecture
 
-![Architecture](https://your-image-link.com)
+![Architecture](Screenshot_2024-07-01-18-43-11-843_com.google.android.youtube.jpg)
+![Architecture](Screenshot_2024-07-01-18-43-54-581_com.google.android.youtube.jpg)
 
 The application is composed of three main services:
 
@@ -330,17 +331,3 @@ curl http://localhost:8082/question/quizId/2
 ```bash
 curl http://localhost:8083/quiz/
 ```
-
-## Architecture Diagram
-
-![Architecture](https://your-image-link.com)
-
-Replace `https://your-image-link.com` with the actual link to your architecture diagram image.
-
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request with your changes.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
