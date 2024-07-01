@@ -52,24 +52,24 @@ The Quiz Service is responsible for creating, retrieving, and managing quizzes. 
 
 - **Create Quiz**
 
-\```http
+```http
 POST http://localhost:8081/quiz/create
 Content-Type: application/json
 
 {
   "title": "Python Quiz"
 }
-\```
+```
 
 - **Get Quiz by ID**
 
-\```http
+```http
 GET http://localhost:8081/quiz/{id}
-\```
+```
 
 Response Example:
 
-\```json
+```json
 {
   "id": 2,
   "title": "Python Quiz",
@@ -96,17 +96,17 @@ Response Example:
     }
   ]
 }
-\```
+```
 
 - **Get All Quizzes**
 
-\```http
+```http
 GET http://localhost:8081/quiz/
-\```
+```
 
 Response Example:
 
-\```json
+```json
 [
   {
     "id": 1,
@@ -146,7 +146,7 @@ Response Example:
     ]
   }
 ]
-\```
+```
 
 ### Question Service
 
@@ -158,7 +158,7 @@ The Question Service manages questions associated with quizzes. It runs on port 
 
 - **Create Question**
 
-\```http
+```http
 POST http://localhost:8082/question
 Content-Type: application/json
 
@@ -167,17 +167,17 @@ Content-Type: application/json
   "question": "Python is dynamically typed or statically typed",
   "quizId": 1
 }
-\```
+```
 
 - **Get All Questions**
 
-\```http
+```http
 GET http://localhost:8082/question
-\```
+```
 
 Response Example:
 
-\```json
+```json
 [
   {
     "questionId": 1,
@@ -200,17 +200,17 @@ Response Example:
     "quizId": 2
   }
 ]
-\```
+```
 
 - **Get Questions by Quiz ID**
 
-\```http
+```http
 GET http://localhost:8082/question/quizId/2
-\```
+```
 
 Response Example:
 
-\```json
+```json
 [
   {
     "questionId": 3,
@@ -228,7 +228,7 @@ Response Example:
     "quizId": 2
   }
 ]
-\```
+```
 
 ### API Gateway
 
@@ -240,13 +240,13 @@ The API Gateway serves as a single entry point to the microservices.
 
 - **Test Controller**
 
-\```http
+```http
 GET http://localhost:8083/quiz-test
-\```
+```
 
 Response Example:
 
-\```json
+```json
 [
   {
     "id": 1,
@@ -286,16 +286,16 @@ Response Example:
     ]
   }
 ]
-\```
+```
 
 ## Setup
 
 ### Clone the repository:
 
-\```bash
+```bash
 git clone https://github.com/your-username/quiz-microservice.git
 cd quiz-microservice
-\```
+```
 
 ### Run the services:
 
@@ -309,27 +309,27 @@ cd quiz-microservice
 
 ### Create a quiz:
 
-\```bash
+```bash
 curl -X POST http://localhost:8081/quiz/create -H "Content-Type: application/json" -d '{"title": "Python Quiz"}'
-\```
+```
 
 ### Get all quizzes:
 
-\```bash
+```bash
 curl http://localhost:8081/quiz/
-\```
+```
 
 ### Get questions by quiz ID:
 
-\```bash
+```bash
 curl http://localhost:8082/question/quizId/2
-\```
+```
 
 ### Access through API Gateway:
 
-\```bash
+```bash
 curl http://localhost:8083/quiz/
-\```
+```
 
 ## Architecture Diagram
 
