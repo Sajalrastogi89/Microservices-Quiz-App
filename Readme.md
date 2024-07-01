@@ -179,3 +179,55 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 License
 This project is licensed under the MIT License. See the LICENSE file for details. combine whole in single file
+\`\`\`http POST http://localhost:8081/quiz/create Request Body:
+
+json Copy code { "title": "Python Quiz" } Get Quiz by ID
+
+http Copy code GET http://localhost:8081/quiz/{id} Response Example:
+
+json Copy code { "id": 2, "title": "Python Quiz", "questionList": \[ {
+"questionId": 1, "question": "Python is dynamically typed or statically
+typed", "quizId": 2 }, { "questionId": 2, "question": "Python is
+dynamically typed or statically typed", "quizId": 2 }, { "questionId":
+3, "question": "Python is dynamically typed or statically typed",
+"quizId": 2 }, { "questionId": 4, "question": "Python is dynamically
+typed or statically typed", "quizId": 2 } \] } Get All Quizzes
+
+http Copy code GET http://localhost:8081/quiz/ Response Example:
+
+json Copy code \[ { "id": 1, "title": "Java Quiz", "questionList": \[ {
+"questionId": 1, "question": "What is Java", "quizId": 1 }, {
+"questionId": 2, "question": "What is Java Networking", "quizId": 1 } \]
+}, { "id": 2, "title": "Python Quiz", "questionList": \[ { "questionId":
+3, "question": "What is Python", "quizId": 2 }, { "questionId": 4,
+"question": "Python is dynamically typed or statically typed", "quizId":
+2 }, { "questionId": 5, "question": "Python is dynamically typed or
+statically typed", "quizId": 2 } \] }\] Setup Clone the repository:
+
+bash Copy code git clone
+https://github.com/your-username/quiz-microservice.git cd
+quiz-microservice Run the services:
+
+Start the Quiz Service on port 8081. Start the Question Service on port
+8082. Start the API Gateway on port 8083. Ensure that the Eureka Server
+is running for service discovery. Configure the environment as per your
+requirements.
+
+Usage Create a quiz:
+
+bash Copy code curl -X POST http://localhost:8081/quiz/create -H
+"Content-Type: application/json" -d '{"title": "Python Quiz"}' Get all
+quizzes:
+
+bash Copy code curl http://localhost:8081/quiz/ Get questions by quiz
+ID:
+
+bash Copy code curl http://localhost:8082/question/quizId/2 Access
+through API Gateway:
+
+bash Copy code curl http://localhost:8083/quiz/ Contributing
+Contributions are welcome! Please fork the repository and submit a pull
+request with your changes.
+
+License This project is licensed under the MIT License. See the LICENSE
+file for details. combine whole in single file
