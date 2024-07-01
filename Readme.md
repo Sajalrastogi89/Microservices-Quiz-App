@@ -51,7 +51,7 @@ http
   POST http://localhost:8081/quiz/create
 Request Body:
 
-json
+```json
 Copy code
 {
   "title": "Python Quiz"
@@ -63,7 +63,7 @@ Copy code
 GET http://localhost:8081/quiz/{id}
 Response Example:
 
-json
+```json
 Copy code
 {
   "id": 2,
@@ -98,7 +98,7 @@ Copy code
 GET http://localhost:8081/quiz/
 Response Example:
 
-json
+```json
 Copy code
 [
   {
@@ -142,7 +142,7 @@ Copy code
 Setup
 Clone the repository:
 
-bash
+```bash
 Copy code
 git clone https://github.com/your-username/quiz-microservice.git
 cd quiz-microservice
@@ -157,22 +157,22 @@ Configure the environment as per your requirements.
 Usage
 Create a quiz:
 
-bash
+```bash
 Copy code
 curl -X POST http://localhost:8081/quiz/create -H "Content-Type: application/json" -d '{"title": "Python Quiz"}'
 Get all quizzes:
 
-bash
+```bash
 Copy code
 curl http://localhost:8081/quiz/
 Get questions by quiz ID:
 
-bash
+```bash
 Copy code
 curl http://localhost:8082/question/quizId/2
 Access through API Gateway:
 
-bash
+```bash
 Copy code
 curl http://localhost:8083/quiz/
 Contributing
