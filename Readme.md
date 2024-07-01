@@ -179,55 +179,64 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 License
 This project is licensed under the MIT License. See the LICENSE file for details. combine whole in single file
-\`\`\`http POST http://localhost:8081/quiz/create Request Body:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Microservice API Documentation</title>
+</head>
+<body>
 
-json Copy code { "title": "Python Quiz" } Get Quiz by ID
+<h1>Quiz Microservice API Documentation</h1>
 
-http Copy code GET http://localhost:8081/quiz/{id} Response Example:
+<h2>Create Quiz</h2>
 
-json Copy code { "id": 2, "title": "Python Quiz", "questionList": \[ {
-"questionId": 1, "question": "Python is dynamically typed or statically
-typed", "quizId": 2 }, { "questionId": 2, "question": "Python is
-dynamically typed or statically typed", "quizId": 2 }, { "questionId":
-3, "question": "Python is dynamically typed or statically typed",
-"quizId": 2 }, { "questionId": 4, "question": "Python is dynamically
-typed or statically typed", "quizId": 2 } \] } Get All Quizzes
+<h3>HTTP Request</h3>
 
-http Copy code GET http://localhost:8081/quiz/ Response Example:
+<pre><code>POST http://localhost:8081/quiz/create
+Content-Type: application/json
 
-json Copy code \[ { "id": 1, "title": "Java Quiz", "questionList": \[ {
-"questionId": 1, "question": "What is Java", "quizId": 1 }, {
-"questionId": 2, "question": "What is Java Networking", "quizId": 1 } \]
-}, { "id": 2, "title": "Python Quiz", "questionList": \[ { "questionId":
-3, "question": "What is Python", "quizId": 2 }, { "questionId": 4,
-"question": "Python is dynamically typed or statically typed", "quizId":
-2 }, { "questionId": 5, "question": "Python is dynamically typed or
-statically typed", "quizId": 2 } \] }\] Setup Clone the repository:
+{
+  "title": "Python Quiz"
+}
+</code></pre>
 
-bash Copy code git clone
-https://github.com/your-username/quiz-microservice.git cd
-quiz-microservice Run the services:
+<h2>Get Quiz by ID</h2>
 
-Start the Quiz Service on port 8081. Start the Question Service on port
-8082. Start the API Gateway on port 8083. Ensure that the Eureka Server
-is running for service discovery. Configure the environment as per your
-requirements.
+<h3>HTTP Request</h3>
 
-Usage Create a quiz:
+<pre><code>GET http://localhost:8081/quiz/{id}</code></pre>
 
-bash Copy code curl -X POST http://localhost:8081/quiz/create -H
-"Content-Type: application/json" -d '{"title": "Python Quiz"}' Get all
-quizzes:
+<h3>Example Response</h3>
 
-bash Copy code curl http://localhost:8081/quiz/ Get questions by quiz
-ID:
+<pre><code>{
+  "id": 2,
+  "title": "Python Quiz",
+  "questionList": [
+    {
+      "questionId": 1,
+      "question": "Python is dynamically typed or statically typed",
+      "quizId": 2
+    },
+    {
+      "questionId": 2,
+      "question": "Python is dynamically typed or statically typed",
+      "quizId": 2
+    },
+    {
+      "questionId": 3,
+      "question": "Python is dynamically typed or statically typed",
+      "quizId": 2
+    },
+    {
+      "questionId": 4,
+      "question": "Python is dynamically typed or statically typed",
+      "quizId": 2
+    }
+  ]
+}
+</code></pre>
 
-bash Copy code curl http://localhost:8082/question/quizId/2 Access
-through API Gateway:
-
-bash Copy code curl http://localhost:8083/quiz/ Contributing
-Contributions are welcome! Please fork the repository and submit a pull
-request with your changes.
-
-License This project is licensed under the MIT License. See the LICENSE
-file for details. combine whole in single file
+</body>
+</html>
