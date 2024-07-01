@@ -55,7 +55,7 @@ Request Body:
 Copy code
 {
   "title": "Python Quiz"
-}
+} ```
 - **Get Quiz by ID**
 
 http
@@ -90,7 +90,7 @@ Copy code
       "quizId": 2
     }
   ]
-}
+} ```
 - **Get All Quizzes**
 
 http
@@ -138,7 +138,7 @@ Copy code
       }
     ]
   }
-]
+] ```
 Setup
 Clone the repository:
 
@@ -159,22 +159,22 @@ Create a quiz:
 
 ```bash
 Copy code
-curl -X POST http://localhost:8081/quiz/create -H "Content-Type: application/json" -d '{"title": "Python Quiz"}'
+curl -X POST http://localhost:8081/quiz/create -H "Content-Type: application/json" -d '{"title": "Python Quiz"}' ```
 Get all quizzes:
 
 ```bash
 Copy code
-curl http://localhost:8081/quiz/
+curl http://localhost:8081/quiz/ ```
 Get questions by quiz ID:
 
 ```bash
 Copy code
-curl http://localhost:8082/question/quizId/2
+curl http://localhost:8082/question/quizId/2 ```
 Access through API Gateway:
 
 ```bash
 Copy code
-curl http://localhost:8083/quiz/
+curl http://localhost:8083/quiz/ ```
 Contributing
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
