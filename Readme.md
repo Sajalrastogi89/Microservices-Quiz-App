@@ -21,10 +21,10 @@ This project is a Quiz Microservice Application designed to manage quizzes and t
 ## Architecture
 
 <div style="display: flex; justify-content: space-around;">
-  <img src="/img/Screenshot_2024-07-01-18-43-11-843_com.google.android.youtube.jpg" alt="Architecture 1" style="width: 55%; margin-right: 20px;">
-  <img src="/img/Screenshot_2024-07-01-18-43-54-581_com.google.android.youtube.jpg" alt="Architecture 2" style="width: 55%; margin-left: 20px;">
-  <img src="/img/Screenshot 2024-07-01 180546.png" alt="Architecture 2" style="width: 55%; margin-left: 20px;">
-  <img src="/img/Screenshot 2024-07-01 225740.png" alt="Architecture 2" style="width: 55%; margin-left: 20px;">
+  <img src="/img/Screenshot_2024-07-01-18-43-11-843_com.google.android.youtube.jpg" alt="Architecture 1" style="width: 45%; margin-right: 20px;">
+  <img src="/img/Screenshot_2024-07-01-18-43-54-581_com.google.android.youtube.jpg" alt="Architecture 2" style="width: 45%; margin-left: 20px;">
+  <img src="/img/Screenshot 2024-07-01 180546.png" alt="Architecture 3" style="width: 45%; margin-right: 20px;">
+  <img src="/img/Screenshot 2024-07-01 225740.png" alt="Architecture 4" style="width: 45%; margin-left: 20px;">
 </div>
 
 
