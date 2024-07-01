@@ -1,5 +1,3 @@
-markdown
-Copy code
 # Quiz Microservice Application
 
 This project is a Quiz Microservice Application designed to manage quizzes and their respective questions. The application uses a microservice architecture with several advanced features to ensure scalability, flexibility, and ease of management.
@@ -20,6 +18,7 @@ This project is a Quiz Microservice Application designed to manage quizzes and t
 ![Architecture](https://your-image-link.com)
 
 The application is composed of three main services:
+
 1. **Quiz Service**: Manages quizzes.
 2. **Question Service**: Handles questions associated with quizzes.
 3. **API Gateway**: Provides a unified interface for clients and handles request routing.
@@ -46,25 +45,24 @@ The Quiz Service is responsible for creating, retrieving, and managing quizzes. 
 
 - **Create Quiz**
 
-  
-http
-  POST http://localhost:8081/quiz/create
-Request Body:
+```http
+POST http://localhost:8081/quiz/create
+Content-Type: application/json
 
-```json
-Copy code
 {
   "title": "Python Quiz"
-} ```
+}
+```
+
 - **Get Quiz by ID**
 
-http
-Copy code
+```http
 GET http://localhost:8081/quiz/{id}
+```
+
 Response Example:
 
 ```json
-Copy code
 {
   "id": 2,
   "title": "Python Quiz",
@@ -90,16 +88,18 @@ Copy code
       "quizId": 2
     }
   ]
-} ```
+}
+```
+
 - **Get All Quizzes**
 
-http
-Copy code
+```http
 GET http://localhost:8081/quiz/
+```
+
 Response Example:
 
 ```json
-Copy code
 [
   {
     "id": 1,
@@ -138,45 +138,56 @@ Copy code
       }
     ]
   }
-] ```
-Setup
-Clone the repository:
+]
+```
+
+## Setup
+
+### Clone the repository:
 
 ```bash
-Copy code
 git clone https://github.com/your-username/quiz-microservice.git
 cd quiz-microservice
-Run the services:
+```
 
-Start the Quiz Service on port 8081.
-Start the Question Service on port 8082.
-Start the API Gateway on port 8083.
-Ensure that the Eureka Server is running for service discovery.
-Configure the environment as per your requirements.
+### Run the services:
 
-Usage
-Create a quiz:
+1. Start the Quiz Service on port 8081.
+2. Start the Question Service on port 8082.
+3. Start the API Gateway on port 8083.
+4. Ensure that the Eureka Server is running for service discovery.
+5. Configure the environment as per your requirements.
 
-```bash
-Copy code
-curl -X POST http://localhost:8081/quiz/create -H "Content-Type: application/json" -d '{"title": "Python Quiz"}' ```
-Get all quizzes:
+## Usage
+
+### Create a quiz:
 
 ```bash
-Copy code
-curl http://localhost:8081/quiz/ ```
-Get questions by quiz ID:
+curl -X POST http://localhost:8081/quiz/create -H "Content-Type: application/json" -d '{"title": "Python Quiz"}'
+```
+
+### Get all quizzes:
 
 ```bash
-Copy code
-curl http://localhost:8082/question/quizId/2 ```
-Access through API Gateway:
+curl http://localhost:8081/quiz/
+```
+
+### Get questions by quiz ID:
 
 ```bash
-Copy code
-curl http://localhost:8083/quiz/ ```
-Contributing
+curl http://localhost:8082/question/quizId/2
+```
+
+### Access through API Gateway:
+
+```bash
+curl http://localhost:8083/quiz/
+```
+
+## Contributing
+
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
-License
-This project is licensed under the MIT License. See the LICENSE  rewrite this in markdown format
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
